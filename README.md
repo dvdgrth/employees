@@ -8,3 +8,6 @@ Technologies:
 - React
 - TypeScript
 - Jest
+
+
+Live version on Netlify: https://hungry-cori-f88023.netlify.app/
