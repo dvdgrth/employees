@@ -1,0 +1,62 @@
+.employee-line-div {
+    background-color: rgba(83, 83, 83, 0.925);
+    /* background-image: linear-gradient(rgb(179, 179, 179), rgb(102, 102, 102)); */
+    box-sizing: border-box;
+    border: 1px solid rgb(37, 37, 37);
+    color: white;
+    text-shadow: 1px 1px 2px #000000;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 50px 15px auto 50px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "avatar . name status"
+                         "avatar . job status"
+                         "avatar . ip status";
+    align-items: center;
+    /* font-family: monospace; */
+}
+
+
+.employee-line-div:hover {
+    background-color: rgba(31, 31, 31, 0.925);
+    box-shadow: 8px 8px 16px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid rgb(54, 54, 54);
+}
+
+.avatar-line{
+    box-sizing: border-box;
+    grid-area: avatar;
+    height: 100%;
+    width: 100%;
+    max-height: 50px;
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid rgb(0, 0, 0);
+    border-style: double;
+    background-size: cover;
+}
+.name-line {
+    grid-area: name;
+}
+.job-line {
+    grid-area: job;
+    font-style: italic;
+    font-size: 12px;
+}
+.ip-line {
+    grid-area: ip;
+    font-size: 10px;
+    color: rgb(194, 194, 194);
+    font-family: monospace; 
+}
+.status-line {
+    grid-area: status;
+    /* border-radius: 50%; */
+    width: 10px;
+    height: 10px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    /* border: 1px solid black; */
+}

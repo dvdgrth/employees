@@ -1,0 +1,27 @@
+.home {
+    /* text-align: center; */
+    background-image: url('./../factory.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+    background-position: center;
+    background-size: cover;
+    /* height: 100%; */
+    min-height: 100%;
+  }
+
+  .main-title {
+    margin: 0 0 20px 0;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    text-shadow: 2px 2px 2px #000000;
+    font-size: 50px;
+    border-bottom: 1px solid white;
+
+  }
+
+  body {
+    overflow-y: scroll;
+  }

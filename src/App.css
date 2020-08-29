@@ -1,5 +1,15 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  /* background-image: url('./factory.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  background-position: center;
+  background-size: cover; */
+}
+
+body, html {
+  height: 100%;
 }
 
 .App-logo {
@@ -36,3 +46,12 @@
     transform: rotate(360deg);
   }
 }
+
+/* .main-title {
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  text-shadow: 2px 2px 2px #000000;
+} */

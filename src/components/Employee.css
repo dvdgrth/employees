@@ -1,0 +1,102 @@
+.employee-background-div {
+    /* text-align: center; */
+    background-image: url('./../pexels-markus-spiske-330771.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+    background-position: center;
+    background-size: cover;
+    /* padding-top: 100px; */
+    height: 100%;
+    width: 100%;
+    
+    position: fixed;
+    top: 0;
+}
+
+.employee-div>h1{
+    margin: 0;
+}
+
+
+.employee-div{
+    margin: auto;
+    margin-top: 100px;
+
+    max-width: 1000px;
+    background-color: rgba(102, 102, 102, 0.973);
+    text-shadow: 1px 1px 1px black;
+    color: white;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "avatar name"
+                         "avatar ip"
+                         "avatar job"
+                         "departmentTitle department"
+                         "emailTitle email"
+                         "phoneTitle phone";
+    /* align-items: center; */
+    gap: 20px;
+    position: relative;
+    font-size: 25px;
+    border: 3px solid rgb(39, 39, 39);
+    border-style: double;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.employee-name-div {
+    grid-area: name;
+    font-size: 50px;
+    border-bottom: 2px dashed rgb(37, 37, 37);
+}
+.employee-avatar-div {
+    box-sizing: border-box;
+    grid-area: avatar;
+    /* height: 100%;
+    width: 100%; */
+    /* max-height: 100px; */
+    height: 250px;
+    width: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid rgb(29, 29, 29);
+    border-style: double;
+    background-size: cover;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+.employee-job-div {
+    grid-area: job;
+    font-style: italic;
+    font-size: 30px;
+}
+.employee-ip-div {
+    grid-area: ip;
+    color: rgb(194, 194, 194);
+    font-family: monospace;
+}
+.employee-status-div {
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    height: 30px;
+    width: 30px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.employee-department-div {
+    grid-area: department;
+    
+}
+.employee-email-div {
+    grid-area: email;
+}
+.employee-phone-div {
+    grid-area: phone;
+}
+.employee-email-div>a {
+    color: white;
+    text-decoration: none;
+}

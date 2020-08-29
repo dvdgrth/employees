@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import EmployeeList from './components/EmployeeList'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import DATA from './DATA/MOCK_DATA_2.json';
+import Home from './components/Home'
+import Employee from './components/Employee'
+import Authentication from './components/Authentication'
+import LoginLogout from './components/LoginLogout'
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Authentication>
+        <Switch>
+          <Route path="/employee">
+            <Employee />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+        <LoginLogout />
+      </Authentication>
+    </Router>
+
   );
 }
 
