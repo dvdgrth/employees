@@ -24,6 +24,13 @@ function Employee() {
     console.log(getEmployeeDataById(parseInt(params.employeeID)));
     const employeeData = getEmployeeDataById(parseInt(params.employeeID));
 
+    if(!employeeData) {
+        alert("Not a valid employee ID.");
+        return (
+            <div className="employee-background-div">No Employeed selected.</div>
+        )
+    }
+
     let color;
     if (employeeData.status) {
         color = "#f7331ecc";
@@ -35,22 +42,40 @@ function Employee() {
     return (
         <div className="employee-background-div">
             <div className="employee-div">
-                <div className="employee-name-div" >{employeeData.lastName}, {employeeData.firstName}</div>
-                <div className="employee-avatar-div" style={{backgroundImage: `url(${employeeData.avatar}), radial-gradient(rgb(240, 240, 240), rgb(83, 83, 83)) ` }}></div>
-                <div className="employee-job-div" >{employeeData.jobTitle}</div>
-                <div className="employee-ip-div" >{employeeData.ipAddress}</div>
-                <div className="employee-status-div" style={{backgroundColor: color}}></div>
-                <div style={{gridArea:"departmentTitle", color: "rgb(194, 194, 194)"}}>Department:</div>
-                <div className="employee-department-div">{employeeData.department}</div>
-                <div style={{gridArea:"emailTitle", color: "rgb(194, 194, 194)"}}>Email:</div>
+                <div className="employee-name-div" >
+                    {employeeData.lastName}, {employeeData.firstName}
+                </div>
+                <div className="employee-avatar-div" style={{backgroundImage: `url(${employeeData.avatar}), radial-gradient(rgb(240, 240, 240), rgb(83, 83, 83)) ` }}>
+                </div>
+                <div className="employee-job-div" >
+                    {employeeData.jobTitle}
+                </div>
+                <div className="employee-ip-div" >
+                    {employeeData.ipAddress}
+                </div>
+                <div className="employee-status-div" style={{backgroundColor: color}}>
+                </div>
+                <div style={{gridArea:"departmentTitle", color: "rgb(194, 194, 194)"}}>
+                    Department:
+                </div>
+                <div className="employee-department-div">
+                    {employeeData.department}
+                </div>
+                <div style={{gridArea:"emailTitle", color: "rgb(194, 194, 194)"}}>
+                    Email:
+                </div>
                 <div className="employee-email-div">
-                    {/* Mailto:{employeeData.email} */}
-                    <a href={mailLink}>{employeeData.email}</a> 
-                    </div>
-                <div style={{gridArea:"phoneTitle", color: "rgb(194, 194, 194)"}}>Phone:</div>
-                <div className="employee-phone-div">{employeeData.phone}</div>
+                    <a href={mailLink}>
+                        {employeeData.email}
+                    </a> 
+                </div>
+                <div style={{gridArea:"phoneTitle", color: "rgb(194, 194, 194)"}}>
+                    Phone:
+                </div>
+                <div className="employee-phone-div">
+                    {employeeData.phone}
+                </div>
             </div>
-
         </div>
     )
 }
